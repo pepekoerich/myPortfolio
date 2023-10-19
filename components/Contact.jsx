@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import { sendEmail } from "@/libs/sendEmail";
 import SubmitButton from "./SubmitButton";
 import toast from "react-hot-toast";
-import { useRef } from "react";
+
 
 export default function Contact() {
   const { ref } = useSectionInView("Contato", 0.9);
-  const formRef = useRef(null);
+ 
 
   return (
     <motion.section
@@ -31,7 +31,6 @@ export default function Contact() {
         ou por este formulário.
       </p>
       <form
-        ref={formRef}
         id="submitForm"
         className="mt-10 flex flex-col"
         action={async (formData) => {
